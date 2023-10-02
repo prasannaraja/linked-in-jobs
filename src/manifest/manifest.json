@@ -1,0 +1,24 @@
+{
+  "name": "LinkedIn Job - Analytics",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Analyses linkedIn job page, highlights your skill sets",
+  "icons": {
+    "128": "icon128.png",
+    "48": "icon48.png",
+    "16": "icon16.png"
+  },
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.linkedin.com/jobs/*"],
+      "js": ["content-scripts.js"]
+    }
+  ],
+  "permissions": ["tabs", "activeTab", "scripting"],
+  "host_permissions": ["*://www.linkedin.com/jobs/*"]
+}

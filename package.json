@@ -1,0 +1,23 @@
+{
+  "name": "linked-in-jobs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && npx tsc && npm run copy-manifest",
+    "copy-manifest": "node copy-files.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chrome": "^0.0.246",
+    "ncp": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.5.20",
+    "jquery": "^3.7.1"
+  }
+}
