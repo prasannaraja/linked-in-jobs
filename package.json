@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && npx tsc && npm run copy-manifest",
-    "copy-manifest": "node copy-files.js",
+    "build": "npm run clear-dist && npm run compile-ts && npm run webpack && npm run copy-other-files",
+    "compile-ts": "npx tsc",
+    "clear-dist": "rm -rf dist",
+    "webpack": "npx webpack --config webpack.config.js",
+    "copy-other-files": "node copy-files.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,10 +17,14 @@
   "devDependencies": {
     "@types/chrome": "^0.0.246",
     "ncp": "^2.0.0",
+    "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   },
   "dependencies": {
     "@types/jquery": "^3.5.20",
-    "jquery": "^3.7.1"
+    "jquery": "^3.7.1",
+    "ts-loader": "^9.4.4",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }
