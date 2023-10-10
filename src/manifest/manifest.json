@@ -14,5 +14,5 @@
     "type": "module"
   },
   "permissions": ["tabs", "activeTab", "scripting"],
-  "host_permissions": ["*://www.linkedin.com/jobs/*"]
+  "host_permissions": ["*://www.linkedin.com/jobs/search/*"]
 }
